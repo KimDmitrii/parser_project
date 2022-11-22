@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="row">
+    <table>
+        <tbody>
+            {% for a in products %}
+            <tr>
+                <td>
+                    <a href="{{ a.link }}">{{ a.name }}</a>
+                </td>
+                <td>
+                    <p>
+                        Source: {{ a.site }}
+                    </p>
+
+                </td>
+                <td>
+                    <p>
+                        Id: {{ a.id }}
+                    </p>
+                </td>
+                <td>
+                    <p>
+                        Price: {{ a.price }}
+                    </p>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock content %}
+
