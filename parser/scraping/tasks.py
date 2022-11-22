@@ -1,11 +1,6 @@
 from __future__ import absolute_import, unicode_literals
-from celery import Celery
-from celery.schedules import crontab
 import requests
-from urllib.request import urlopen
 from bs4 import BeautifulSoup
-import csv
-import sys
 import json
 from celery import app, shared_task
 from .models import Data
