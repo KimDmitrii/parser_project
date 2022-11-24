@@ -14,7 +14,11 @@ def index(request):
     context = {
         'latest_data': latest_data
     }
-    return render(request, 'scraping/index.html', context)
+    return render(
+        request,
+        'scraping/index.html',
+        context
+    )
 
 
 def listform(request):
@@ -23,4 +27,9 @@ def listform(request):
     else:
         form = CategoryForm()
 
-    return render(request, 'scraping/droplist.html', {'form': form})
+    return render(
+        request,
+        'scraping/droplist.html',
+        {'form': form}
+    )
+

@@ -1,7 +1,7 @@
 {% if latest_data %}
     <ul>
-        {% for category in latest_data %}
-        <li>{{ category.category }}</li>
+        {% for data in latest_data %}
+            <li>{{ data.category }}</li>
         {% endfor %}
     </ul>
 {% else %}
