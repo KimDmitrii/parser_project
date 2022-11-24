@@ -12,7 +12,7 @@ app.autodiscover_tasks()
 
 app.conf.beat_schedule = {
     'scrapping-task-every-15-minutes': {
-        'task': 'scraping.tasks.getLinksFromPagination',
+        'task': 'scraping.tasks.get_datastroitel',
         'schedule': crontab(minute='*/15'),
     },
 }

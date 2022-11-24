@@ -1,0 +1,11 @@
+{% if latest_data %}
+    <ul>
+        {% for category in latest_data %}
+        <li>{{ category.category }}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>
+        No data are available
+    </p>
+{% endif %}
